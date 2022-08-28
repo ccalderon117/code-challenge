@@ -14,11 +14,11 @@
         <form class="form" role="form">
           {% csrf_token %}
           <input name="address" type="text" class="form-control" id="address" placeholder="123 Main St. Suite 100 Chicago, IL">
-          <button id="submit" type="submit" class="btn btn-success mt-3">Parse!</button>
+          <button id="submit" onclick="getUserInput(event)" type="submit" class="btn btn-success mt-3">Parse!</button>
         </form>
       </div>
       <!-- TODO: Display parsed address components here. -->
-      <div id="address-results" style="display:none">
+      <div id="address-results" class="hide">
         <h4>Parsing results</h4>
         <p>Address type: <strong><span id="parse-type"></span></strong></p>
         <table class="table table-bordered">
@@ -32,6 +32,7 @@
           </tbody>
         </table>
       </div>
+      <div id="repeat" class="alert alert-danger hide" >Unable to parse this value due to repeated labels. Our team has been notified of the error.</div>
     </div>
   </div>
 </div>
