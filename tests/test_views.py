@@ -1,7 +1,10 @@
 import pytest
 import requests
 
-###Sorry if this is not what was being asked! This is my foray into python so pyI am certain I did not get this part right.###
+#Sorry if this is not what was being asked! This is my foray into python so I am certain I did not get this part right.###
+
+##My assumption is that we want to test that the API is working the way we expect it to whether the use inputs the address in the correct or incorrect format.
+
 #This method sends a requests to the API
 def api_request(address_string):
     return requests.get('http://localhost:8000/api/parse/?csrfmiddlewaretoken=8cvhuDLNK2wPx7zFR9OnGgXD0hw8gTCnCrml2hkYxDLLwWRnqiC0fLKbDLPZxKER&address='+address_string)

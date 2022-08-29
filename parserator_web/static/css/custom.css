@@ -1,4 +1,5 @@
 /* Add custom style overrides here. */
+/* Class that hides components */
 .hide{
     display: none;
 }
